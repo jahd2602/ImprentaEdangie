@@ -4,3 +4,10 @@
 *.jar
 *.war
 *.ear
+/Entidades/nbproject/private/
+/EdangieNBPA/nbproject/private/
+/EclipseLink/nbproject/private/
+/EdangieNBPA/build/
+/EdangieNBPA/DerbyClient/build/
+/EdangieNBPA/Cliente/build/
+/EdangieNBPA/EclipseLink/build/
