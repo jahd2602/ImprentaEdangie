@@ -4,3 +4,6 @@
 *.jar
 *.war
 *.ear
+/EclipseLink/nbproject/private/
+/EdangieNBPA/nbproject/private/
+/Entidades/nbproject/private/
