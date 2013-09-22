@@ -5,9 +5,10 @@
  */
 package com.edangie.view;
 
-import com.edangie.view.almacen.InsumoRegistrar;
-import com.edangie.view.almacen.InsumoTabs;
+import com.edangie.view.insumo.InsumoRegistrar;
+import com.edangie.view.insumo.InsumoTabs;
 import java.awt.Container;
+import javax.swing.UIManager;
 
 /**
  *
@@ -24,6 +25,11 @@ public class Principal extends javax.swing.JFrame {
         initComponents();
         this.contentPane = getContentPane();
 
+        try {
+            UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+        } catch (Exception e) {
+            System.out.println("UIManager Exception : " + e);
+        }
     }
 
     /**
@@ -35,6 +41,8 @@ public class Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        PnlContenido = new javax.swing.JPanel();
+        insumoTabs1 = new com.edangie.view.insumo.InsumoTabs();
         Menu = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -44,6 +52,19 @@ public class Principal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        javax.swing.GroupLayout PnlContenidoLayout = new javax.swing.GroupLayout(PnlContenido);
+        PnlContenido.setLayout(PnlContenidoLayout);
+        PnlContenidoLayout.setHorizontalGroup(
+            PnlContenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(insumoTabs1, javax.swing.GroupLayout.DEFAULT_SIZE, 880, Short.MAX_VALUE)
+        );
+        PnlContenidoLayout.setVerticalGroup(
+            PnlContenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(insumoTabs1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 577, Short.MAX_VALUE)
+        );
+
+        Menu.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
         jMenu1.setText("Pedidos");
         Menu.add(jMenu1);
 
@@ -51,6 +72,11 @@ public class Principal extends javax.swing.JFrame {
         Menu.add(jMenu2);
 
         jMenu3.setText("Almacen");
+        jMenu3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu3MouseClicked(evt);
+            }
+        });
 
         jMenuItem1.setText("Insumos");
         jMenuItem1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -71,11 +97,17 @@ public class Principal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 844, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(PnlContenido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 488, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addComponent(PnlContenido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -95,6 +127,20 @@ public class Principal extends javax.swing.JFrame {
         validate();
         setVisible(true);
     }//GEN-LAST:event_jMenuItem1MouseClicked
+
+    private void jMenu3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu3MouseClicked
+        this.contentPane.removeAll();
+        InsumoTabs insumoTabs = new InsumoTabs();
+        insumoTabs.setVisible(true);
+        this.contentPane.add(insumoTabs);
+        // this.PnlConteÏnido.add(insumoRegistrar);Ï
+        // this.PnlContenido.setVisible(true);
+
+        System.out.println("new panel created");//for debugging purposes
+
+        validate();
+        setVisible(true);
+    }//GEN-LAST:event_jMenu3MouseClicked
 
     /**
      * @param args the command line arguments
@@ -133,6 +179,8 @@ public class Principal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar Menu;
+    private javax.swing.JPanel PnlContenido;
+    private com.edangie.view.insumo.InsumoTabs insumoTabs1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;

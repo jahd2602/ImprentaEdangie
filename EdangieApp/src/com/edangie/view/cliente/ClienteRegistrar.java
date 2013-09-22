@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.edangie.view.almacen;
+package com.edangie.view.cliente;
 
 /**
  *
  * @author daustinsac
  */
-public class InsumoTabs extends javax.swing.JPanel {
+public class ClienteRegistrar extends javax.swing.JPanel {
 
     /**
-     * Creates new form InsumoTabs
+     * Creates new form ClienteRegistrar
      */
-    public InsumoTabs() {
+    public ClienteRegistrar() {
         initComponents();
     }
 
@@ -27,31 +27,30 @@ public class InsumoTabs extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTabbedPane1 = new javax.swing.JTabbedPane();
-        insumoListar1 = new com.edangie.view.almacen.InsumoListar();
-        insumoRegistrar1 = new com.edangie.view.almacen.InsumoRegistrar();
+        jLabel2 = new javax.swing.JLabel();
 
-        jTabbedPane1.addTab("Listar", insumoListar1);
-        jTabbedPane1.addTab("Registrar", insumoRegistrar1);
+        jLabel2.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
+        jLabel2.setText("Registrar Cliente");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 809, Short.MAX_VALUE)
-                .addContainerGap())
+                .addContainerGap(105, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(97, 97, 97))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 473, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(240, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private com.edangie.view.almacen.InsumoListar insumoListar1;
-    private com.edangie.view.almacen.InsumoRegistrar insumoRegistrar1;
-    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }
