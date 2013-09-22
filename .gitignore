@@ -4,31 +4,4 @@
 *.jar
 *.war
 *.ear
-<<<<<<< HEAD
-/Entidades/nbproject/private/
-/EdangieNBPA/nbproject/private/
-/EclipseLink/nbproject/private/
-/EdangieNBPA/build/
-/EdangieNBPA/DerbyClient/build/
-/EdangieNBPA/Cliente/build/
-/EdangieNBPA/EclipseLink/build/
-/EclipseLink/build/
-/EclipseLink/dist/
-/EdangieNBPA/EclipseLink/nbproject/private/
-/EdangieNBPA/DerbyClient/nbproject/private/
-/EdangieNBPA/Cliente/nbproject/private/
-/EdangieNBPA/Insumo/nbproject/private/
-/Model/nbproject/private/
-/Model/build/
-/Model/dist/
-/EdangieNBPA/BeansBinding/build/
-/EdangieNBPA/Model/build/
-/EdangieNBPA/Insumo/build/
-/EdangieNBPA/Model/nbproject/private/
-/EdangieNBPA/BeansBinding/nbproject/private/
-/EdangieNBPA/dist/
-=======
-/EclipseLink/nbproject/private/
-/EdangieNBPA/nbproject/private/
-/Entidades/nbproject/private/
->>>>>>> 2f7785bea6cd69a21c57a7433d9656d1485bca99
+/EdangieJairoBranch/nbproject/private/
