@@ -19,7 +19,7 @@ public class ProveedorRegistrar extends javax.swing.JPanel {
      */
     public ProveedorRegistrar() {
         initComponents();
-         if (!Beans.isDesignTime()) {
+        if (!Beans.isDesignTime()) {
             entityManager.getTransaction().begin();
         }
         // this.proveedor = new Proveedor();
@@ -67,7 +67,7 @@ public class ProveedorRegistrar extends javax.swing.JPanel {
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel4.setText("Telefono:");
 
-        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, proveedor, org.jdesktop.beansbinding.ELProperty.create("${ruc}"), TxtNombre, org.jdesktop.beansbinding.BeanProperty.create("text"));
+        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, proveedor, org.jdesktop.beansbinding.ELProperty.create("${ruc}"), TxtNombre, org.jdesktop.beansbinding.BeanProperty.create("text"), "");
         bindingGroup.addBinding(binding);
 
         jLabel2.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
@@ -191,26 +191,28 @@ public class ProveedorRegistrar extends javax.swing.JPanel {
     private void BtnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnLimpiarActionPerformed
         System.out.println("Limpiarr");
         this.proveedor = new Proveedor();
-       
+        this.proveedor.setNombre("");
+        bindingGroup.bind();
+
     }//GEN-LAST:event_BtnLimpiarActionPerformed
 
     private void BtnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnGuardarActionPerformed
-    
+
         System.out.println("Guardar");
         System.out.println(this.proveedor);
-        try {    
-           // com.edangie.model.Proveedor i = new com.edangie.model.Proveedor();
-            //  entityManager.persist(i);
+        try {
+            
             entityManager.persist(this.proveedor);
-           entityManager.getTransaction().commit();
-           entityManager.getTransaction().begin();
-        this.proveedor = new Proveedor();
-        
+            entityManager.getTransaction().commit();
+            entityManager.getTransaction().begin();
+            
+            this.proveedor = new Proveedor();
+          
+
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }//GEN-LAST:event_BtnGuardarActionPerformed
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnGuardar;
     private javax.swing.JButton BtnLimpiar;
