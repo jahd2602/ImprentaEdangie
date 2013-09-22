@@ -420,7 +420,7 @@ public class ClienteEdit extends JPanel {
 
     private void newButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newButtonActionPerformed
         boolean esJuridica = false;
-        switch (JOptionPane.showConfirmDialog(this, "¿Crear persona juridica?")) {
+        switch (JOptionPane.showConfirmDialog(this, "¿Crear persona Juridica?\nEn caso negativo, se creará persona Natural.")) {
             case JOptionPane.YES_OPTION:
                 esJuridica = true;
                 break;
