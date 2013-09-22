@@ -85,9 +85,9 @@ public class Principal extends javax.swing.JFrame {
 
         this.contentPane.removeAll();
         InsumoTabs insumoTabs = new InsumoTabs();
-insumoTabs.setVisible(true);
+        insumoTabs.setVisible(true);
         this.contentPane.add(insumoTabs);
-        // this.PnlContenido.add(insumoRegistrar);
+        // this.PnlConteÏnido.add(insumoRegistrar);Ï
         // this.PnlContenido.setVisible(true);
 
         System.out.println("new panel created");//for debugging purposes
