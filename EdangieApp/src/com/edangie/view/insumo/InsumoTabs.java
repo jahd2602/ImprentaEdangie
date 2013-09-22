@@ -39,6 +39,11 @@ public class InsumoTabs extends javax.swing.JPanel {
 
         proveedorRegistrar1.setBackground(new java.awt.Color(244, 244, 244));
         proveedorRegistrar1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        proveedorRegistrar1.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                proveedorRegistrar1PropertyChange(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -79,6 +84,10 @@ public class InsumoTabs extends javax.swing.JPanel {
             .addComponent(jTabbedPane1)
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void proveedorRegistrar1PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_proveedorRegistrar1PropertyChange
+        // TODO add your handling code here:
+    }//GEN-LAST:event_proveedorRegistrar1PropertyChange
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.edangie.view.insumo.InsumoListar insumoListar1;
