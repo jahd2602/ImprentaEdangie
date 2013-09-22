@@ -231,9 +231,13 @@ public class ClienteEdit extends JPanel {
 
     private void newButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newButtonActionPerformed
         com.edangie.model.Cliente c = new com.edangie.model.Cliente();
-//        int id = ((Number) entityManager.createNamedQuery("Cliente.findAllCount").getSingleResult()).intValue();
-//        id++;
-//        c.setId(id);
+        try {
+            int id = ((Number) entityManager.createNamedQuery("Cliente.findAllMax").getSingleResult()).intValue();
+            id++;
+            c.setId(id);
+        } catch (Exception ex) {
+            c.setId(1);
+        }
         entityManager.persist(c);
         list.add(c);
         int row = list.size() - 1;
