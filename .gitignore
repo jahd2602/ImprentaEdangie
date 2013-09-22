@@ -5,3 +5,8 @@
 *.war
 *.ear
 /EdangieJairoBranch/nbproject/private/
+/EdangieApp/nbproject/private/
+/EdangieModel/nbproject/private/
+/EdangieModel/build/
+/EdangieJairoBranch/build/
+/EdangieJairoBranch/dist/

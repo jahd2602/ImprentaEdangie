@@ -1,6 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
+ * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
 package com.edangie.model;
@@ -20,17 +19,19 @@ import javax.persistence.Table;
 
 /**
  *
- * @author daustinsac
+ * @author jahd
  */
 @Entity
 @Table(name = "CLIENTE")
 @NamedQueries({
+    @NamedQuery(name = "Cliente.findAllCount", query = "SELECT COUNT(c) FROM Cliente c"),
     @NamedQuery(name = "Cliente.findAll", query = "SELECT c FROM Cliente c"),
     @NamedQuery(name = "Cliente.findByDireccion", query = "SELECT c FROM Cliente c WHERE c.direccion = :direccion"),
     @NamedQuery(name = "Cliente.findByTelefono", query = "SELECT c FROM Cliente c WHERE c.telefono = :telefono"),
     @NamedQuery(name = "Cliente.findById", query = "SELECT c FROM Cliente c WHERE c.id = :id"),
     @NamedQuery(name = "Cliente.findByTipo", query = "SELECT c FROM Cliente c WHERE c.tipo = :tipo")})
 public class Cliente implements Serializable {
+
     private static final long serialVersionUID = 1L;
     @Basic(optional = false)
     @Column(name = "DIRECCION")
@@ -144,5 +145,4 @@ public class Cliente implements Serializable {
     public String toString() {
         return "com.edangie.model.Cliente[ id=" + id + " ]";
     }
-    
 }
