@@ -134,6 +134,6 @@ public class Proveedor implements Serializable {
 
     @Override
     public String toString() {
-        return "com.edangie.model.Proveedor[ id=" + id + " ]";
+        return "Proveedor{" + "nombre=" + nombre + ", ruc=" + ruc + ", razonSocial=" + razonSocial + ", contacto=" + contacto + ", telefono=" + telefono + ", id=" + id + ", insumoList=" + insumoList + '}';
     }
 }
