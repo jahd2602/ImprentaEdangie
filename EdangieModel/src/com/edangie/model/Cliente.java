@@ -24,7 +24,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "CLIENTE")
 @NamedQueries({
-    @NamedQuery(name = "Cliente.findAllCount", query = "SELECT COUNT(c) FROM Cliente c"),
+    @NamedQuery(name = "Cliente.findAllMax", query = "SELECT MAX(c.id) FROM Cliente c"),
     @NamedQuery(name = "Cliente.findAll", query = "SELECT c FROM Cliente c"),
     @NamedQuery(name = "Cliente.findByDireccion", query = "SELECT c FROM Cliente c WHERE c.direccion = :direccion"),
     @NamedQuery(name = "Cliente.findByTelefono", query = "SELECT c FROM Cliente c WHERE c.telefono = :telefono"),
