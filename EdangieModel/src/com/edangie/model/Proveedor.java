@@ -1,6 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
+ * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
 package com.edangie.model;
@@ -19,7 +18,7 @@ import javax.persistence.Table;
 
 /**
  *
- * @author daustinsac
+ * @author jahd
  */
 @Entity
 @Table(name = "PROVEEDOR")
@@ -137,5 +136,4 @@ public class Proveedor implements Serializable {
     public String toString() {
         return "com.edangie.model.Proveedor[ id=" + id + " ]";
     }
-    
 }
