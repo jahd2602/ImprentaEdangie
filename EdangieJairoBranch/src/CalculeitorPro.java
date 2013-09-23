@@ -7,7 +7,7 @@
  *
  * @author jahd
  */
-public class Calculeitor2000MaxPower implements java.io.Serializable {
+public class CalculeitorPro implements java.io.Serializable {
 
     private int cantidad;
     private double precioUnitario;
@@ -15,10 +15,10 @@ public class Calculeitor2000MaxPower implements java.io.Serializable {
     private double porcentajeGanancias;
     private double subTotal;
 
-    public Calculeitor2000MaxPower() {
+    public CalculeitorPro() {
     }
 
-    public Calculeitor2000MaxPower(int cantidad, double precioUnitario, double totalInsumo, double porcentajeGanancias) {
+    public CalculeitorPro(int cantidad, double precioUnitario, double totalInsumo, double porcentajeGanancias) {
         this.cantidad = cantidad;
         this.precioUnitario = precioUnitario;
         this.totalInsumo = totalInsumo;

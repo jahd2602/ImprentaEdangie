@@ -74,7 +74,7 @@ public class PruebaCalculoPrecio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        calc = new Calculeitor2000MaxPower();
+        calc = new CalculeitorPro();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -225,7 +225,7 @@ public class PruebaCalculoPrecio extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private Calculeitor2000MaxPower calc;
+    private CalculeitorPro calc;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

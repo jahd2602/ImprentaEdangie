@@ -2,7 +2,7 @@
 
 <Form version="1.5" maxVersion="1.8" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
-    <Component class="Calculeitor2000MaxPower" name="calc">
+    <Component class="CalculeitorPro" name="calc">
     </Component>
   </NonVisualComponents>
   <Properties>
