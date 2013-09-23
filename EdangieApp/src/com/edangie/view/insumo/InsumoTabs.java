@@ -31,25 +31,12 @@ public class InsumoTabs extends javax.swing.JPanel {
         insumoListar2 = new com.edangie.view.insumo.InsumoListar();
         proveedorListar2 = new com.edangie.view.proveedor.ProveedorListar();
 
+        setLayout(new java.awt.BorderLayout());
+
         jTabbedPane1.addTab("Insumos", insumoListar2);
         jTabbedPane1.addTab("Proveedores", proveedorListar2);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 939, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 553, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+        add(jTabbedPane1, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -31,19 +31,12 @@ public class PedidoTabs extends javax.swing.JPanel {
         pedidoListar2 = new com.edangie.view.pedido.PedidoListar();
         pedidoRegistrar2 = new com.edangie.view.pedido.PedidoRegistrar();
 
+        setLayout(new java.awt.BorderLayout());
+
         jTabbedPane2.addTab("Listar Pedidos", pedidoListar2);
         jTabbedPane2.addTab("Nuevo Pedido", pedidoRegistrar2);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane2, javax.swing.GroupLayout.Alignment.TRAILING)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane2, javax.swing.GroupLayout.Alignment.TRAILING)
-        );
+        add(jTabbedPane2, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

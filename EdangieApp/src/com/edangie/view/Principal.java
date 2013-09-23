@@ -5,10 +5,20 @@
  */
 package com.edangie.view;
 
+import com.edangie.view.cliente.ClienteRegistrar;
 import com.edangie.view.insumo.InsumoRegistrar;
 import com.edangie.view.insumo.InsumoTabs;
+import com.edangie.view.pedido.PedidoTabs;
+import com.edangie.view.proveedor.ProveedorListar;
+import com.edangie.view.reporte.ReporteTabs;
+import java.awt.BorderLayout;
+import java.awt.Component;
 import java.awt.Container;
+import java.awt.Image;
+import java.awt.Toolkit;
+import javax.swing.JOptionPane;
 import javax.swing.UIManager;
+import org.jvnet.substance.SubstanceLookAndFeel;
 
 /**
  *
@@ -25,11 +35,9 @@ public class Principal extends javax.swing.JFrame {
         initComponents();
         this.contentPane = getContentPane();
 
-        try {
-            UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
-        } catch (Exception e) {
-            System.out.println("UIManager Exception : " + e);
-        }
+        this.setcontenedor(new InsumoTabs());
+        this.pack();
+        //setExtendedState(Principal.MAXIMIZED_BOTH);
     }
 
     /**
@@ -42,105 +50,131 @@ public class Principal extends javax.swing.JFrame {
     private void initComponents() {
 
         PnlContenido = new javax.swing.JPanel();
-        insumoTabs1 = new com.edangie.view.insumo.InsumoTabs();
         Menu = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
         jMenu3 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("com/edangie/view/Bundle"); // NOI18N
+        setTitle(bundle.getString("Principal.title")); // NOI18N
+        setIconImage(getIconImage());
+        setLocationByPlatform(true);
+        setSize(new java.awt.Dimension(993, 638));
+        getContentPane().setLayout(new javax.swing.BoxLayout(getContentPane(), javax.swing.BoxLayout.LINE_AXIS));
 
-        javax.swing.GroupLayout PnlContenidoLayout = new javax.swing.GroupLayout(PnlContenido);
-        PnlContenido.setLayout(PnlContenidoLayout);
-        PnlContenidoLayout.setHorizontalGroup(
-            PnlContenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(insumoTabs1, javax.swing.GroupLayout.DEFAULT_SIZE, 880, Short.MAX_VALUE)
-        );
-        PnlContenidoLayout.setVerticalGroup(
-            PnlContenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(insumoTabs1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 577, Short.MAX_VALUE)
-        );
+        PnlContenido.setMinimumSize(new java.awt.Dimension(800, 600));
+        PnlContenido.setSize(new java.awt.Dimension(993, 638));
+        PnlContenido.setLayout(new java.awt.BorderLayout());
+        getContentPane().add(PnlContenido);
 
-        Menu.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        jMenu1.setText("Pedidos");
+        jMenu1.setText(bundle.getString("Principal.jMenu1.text")); // NOI18N
+        jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu1MouseClicked(evt);
+            }
+        });
+        jMenu1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu1ActionPerformed(evt);
+            }
+        });
         Menu.add(jMenu1);
 
-        jMenu2.setText("Cliente");
+        jMenu2.setText(bundle.getString("Principal.jMenu2.text")); // NOI18N
+        jMenu2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu2MouseClicked(evt);
+            }
+        });
+        jMenu2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu2ActionPerformed(evt);
+            }
+        });
         Menu.add(jMenu2);
 
-        jMenu3.setText("Almacen");
+        jMenu3.setText(bundle.getString("Principal.jMenu3.text")); // NOI18N
         jMenu3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jMenu3MouseClicked(evt);
             }
         });
-
-        jMenuItem1.setText("Insumos");
-        jMenuItem1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jMenuItem1MouseClicked(evt);
+        jMenu3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu3ActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem1);
-
         Menu.add(jMenu3);
 
-        jMenu4.setText("Reporte");
+        jMenu4.setText(bundle.getString("Principal.jMenu4.text")); // NOI18N
+        jMenu4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu4MouseClicked(evt);
+            }
+        });
+        jMenu4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu4ActionPerformed(evt);
+            }
+        });
         Menu.add(jMenu4);
 
         setJMenuBar(Menu);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(PnlContenido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(PnlContenido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem1MouseClicked
+    public void setcontenedor(Component fr) {
+        try {
+            PnlContenido.removeAll();
+            PnlContenido.add(fr, BorderLayout.CENTER);
+            // PnlContenido.setSize(900,600);
+            PnlContenido.updateUI();
+             // this.pack();  // pack redimensiona el formulario con las propiedades del nuevo
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(fr, e.getMessage());
+        }
 
-        this.contentPane.removeAll();
-        InsumoTabs insumoTabs = new InsumoTabs();
-        insumoTabs.setVisible(true);
-        this.contentPane.add(insumoTabs);
-        // this.PnlConteÏnido.add(insumoRegistrar);Ï
-        // this.PnlContenido.setVisible(true);
 
-        System.out.println("new panel created");//for debugging purposes
 
-        validate();
-        setVisible(true);
-    }//GEN-LAST:event_jMenuItem1MouseClicked
+    }
+
+    @Override
+    public Image getIconImage() {
+        Image retValue = Toolkit.getDefaultToolkit().
+                getImage(ClassLoader.getSystemResource("resources/icono.png"));
+        return retValue;
+    }
 
     private void jMenu3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu3MouseClicked
-        this.contentPane.removeAll();
-        InsumoTabs insumoTabs = new InsumoTabs();
-        insumoTabs.setVisible(true);
-        this.contentPane.add(insumoTabs);
-        // this.PnlConteÏnido.add(insumoRegistrar);Ï
-        // this.PnlContenido.setVisible(true);
-
-        System.out.println("new panel created");//for debugging purposes
-
-        validate();
-        setVisible(true);
+        this.setcontenedor(new InsumoTabs());
     }//GEN-LAST:event_jMenu3MouseClicked
+
+    private void jMenu3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu3ActionPerformed
+    }//GEN-LAST:event_jMenu3ActionPerformed
+
+    private void jMenu4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu4ActionPerformed
+    }//GEN-LAST:event_jMenu4ActionPerformed
+
+    private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
+    }//GEN-LAST:event_jMenu1ActionPerformed
+
+    private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
+    }//GEN-LAST:event_jMenu2ActionPerformed
+
+    private void jMenu4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu4MouseClicked
+        this.setcontenedor(new ReporteTabs());
+    }//GEN-LAST:event_jMenu4MouseClicked
+
+    private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
+        this.setcontenedor(new PedidoTabs());
+    }//GEN-LAST:event_jMenu1MouseClicked
+
+    private void jMenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MouseClicked
+        this.setcontenedor(new ClienteRegistrar());
+    }//GEN-LAST:event_jMenu2MouseClicked
 
     /**
      * @param args the command line arguments
@@ -169,22 +203,25 @@ public class Principal extends javax.swing.JFrame {
         }
         //</editor-fold>
 
+
+        Principal.setDefaultLookAndFeelDecorated(true);
+        SubstanceLookAndFeel.setSkin("org.jvnet.substance.skin.NebulaSkin");
+
+
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Principal().setVisible(true);
+       
             }
         });
     }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar Menu;
     private javax.swing.JPanel PnlContenido;
-    private com.edangie.view.insumo.InsumoTabs insumoTabs1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenuItem jMenuItem1;
     // End of variables declaration//GEN-END:variables
 }
