@@ -5,15 +5,15 @@
  */
 package com.edangie.view;
 
-import com.edangie.view.cliente.ClienteRegistrar;
-import com.edangie.view.insumo.InsumoRegistrar;
-import com.edangie.view.insumo.InsumoTabs;
+import com.edangie.view.cliente.ClienteView;
+import com.edangie.view.insumo.InsumoView;
 import com.edangie.view.pedido.PedidoTabs;
-import com.edangie.view.proveedor.ProveedorListar;
+import com.edangie.view.proveedor.ProveedorView;
 import com.edangie.view.reporte.ReporteTabs;
 import java.awt.BorderLayout;
 import java.awt.Component;
 import java.awt.Container;
+import java.awt.Dimension;
 import java.awt.Image;
 import java.awt.Toolkit;
 import javax.swing.JOptionPane;
@@ -35,8 +35,11 @@ public class Principal extends javax.swing.JFrame {
         initComponents();
         this.contentPane = getContentPane();
 
-        this.setcontenedor(new InsumoTabs());
+        this.setcontenedor(new InsumoView());
         this.pack();
+
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation(dim.width / 2 - this.getSize().width / 2, dim.height / 2 - this.getSize().height / 2);
         //setExtendedState(Principal.MAXIMIZED_BOTH);
     }
 
@@ -132,7 +135,7 @@ public class Principal extends javax.swing.JFrame {
             PnlContenido.add(fr, BorderLayout.CENTER);
             // PnlContenido.setSize(900,600);
             PnlContenido.updateUI();
-             // this.pack();  // pack redimensiona el formulario con las propiedades del nuevo
+            // this.pack();  // pack redimensiona el formulario con las propiedades del nuevo
         } catch (Exception e) {
             JOptionPane.showMessageDialog(fr, e.getMessage());
         }
@@ -149,10 +152,11 @@ public class Principal extends javax.swing.JFrame {
     }
 
     private void jMenu3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu3MouseClicked
-        this.setcontenedor(new InsumoTabs());
+        this.setcontenedor(new InsumoView());
     }//GEN-LAST:event_jMenu3MouseClicked
 
     private void jMenu3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu3ActionPerformed
+      //  this.setcontenedor(new InsumoView());
     }//GEN-LAST:event_jMenu3ActionPerformed
 
     private void jMenu4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu4ActionPerformed
@@ -173,7 +177,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenu1MouseClicked
 
     private void jMenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MouseClicked
-        this.setcontenedor(new ClienteRegistrar());
+        this.setcontenedor(new ClienteView());
     }//GEN-LAST:event_jMenu2MouseClicked
 
     /**
@@ -212,7 +216,7 @@ public class Principal extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Principal().setVisible(true);
-       
+
             }
         });
     }

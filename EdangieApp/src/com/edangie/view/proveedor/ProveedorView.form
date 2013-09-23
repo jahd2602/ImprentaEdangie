@@ -56,39 +56,6 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Component id="masterScrollPane" min="-2" pref="583" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="razonSocialLabel" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="nombreLabel" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="rucLabel" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="contactoLabel" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="telefonoLabel" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="idLabel" alignment="0" max="32767" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="rucField" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="razonSocialField" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="contactoField" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="telefonoField" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="idField" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="nombreField" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                              <Component id="newButton" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="deleteButton" min="-2" pref="125" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="saveButton" pref="106" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                  <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
@@ -96,25 +63,66 @@
                           </Group>
                           <Component id="jLabel2" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="636" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="jTextField1" min="-2" pref="455" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="jButton1" min="-2" pref="116" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="masterScrollPane" alignment="0" min="-2" pref="583" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="razonSocialLabel" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="nombreLabel" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="rucLabel" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="contactoLabel" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="telefonoLabel" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="idLabel" alignment="0" min="-2" pref="83" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="rucField" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="razonSocialField" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="contactoField" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="telefonoField" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="TxtCodigo" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="nombreField" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                              <Component id="newButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="deleteButton" min="-2" pref="125" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="saveButton" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jLabel2" min="-2" pref="45" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="idLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="TxtCodigo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel2" min="-2" pref="45" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="masterScrollPane" pref="0" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="nombreLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="nombreField" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -139,21 +147,25 @@
                           <Component id="telefonoLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="telefonoField" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="idLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="idField" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="newButton" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="deleteButton" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="saveButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="0" pref="115" max="32767" attributes="0"/>
+                      <EmptySpace pref="111" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="masterScrollPane" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
               <Component id="refreshButton" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" max="-2" attributes="0"/>
           </Group>
@@ -169,31 +181,64 @@
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
         <Component class="javax.swing.JTable" name="masterTable">
+          <Properties>
+            <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+              <TableColumnModel selectionModel="0">
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+              </TableColumnModel>
+            </Property>
+            <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+              <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+            </Property>
+          </Properties>
           <BindingProperties>
-            <BindingProperty name="elements" source="list" target="masterTable" targetPath="elements" updateStrategy="0" immediately="false">
+            <BindingProperty name="elements" source="list" target="masterTable" targetPath="elements" updateStrategy="0" immediately="true">
+              <Subbinding sourcePath="${id}">
+                <BindingParameter name="NAME" value="Codigo"/>
+              </Subbinding>
               <Subbinding sourcePath="${nombre}">
-                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="0"/>
-                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Object.class"/>
+                <BindingParameter name="NAME" value="Nombre"/>
               </Subbinding>
               <Subbinding sourcePath="${ruc}">
-                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="1"/>
-                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Object.class"/>
+                <BindingParameter name="NAME" value="Ruc"/>
               </Subbinding>
               <Subbinding sourcePath="${razonSocial}">
-                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="2"/>
-                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Object.class"/>
+                <BindingParameter name="NAME" value="Razon Social"/>
               </Subbinding>
               <Subbinding sourcePath="${contacto}">
-                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="3"/>
-                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Object.class"/>
+                <BindingParameter name="NAME" value="Contacto"/>
               </Subbinding>
               <Subbinding sourcePath="${telefono}">
-                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="4"/>
-                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Object.class"/>
-              </Subbinding>
-              <Subbinding sourcePath="${id}">
-                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN" value="5"/>
-                <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Object.class"/>
+                <BindingParameter name="NAME" value="Telefono"/>
               </Subbinding>
             </BindingProperty>
           </BindingProperties>
@@ -213,7 +258,7 @@
     <Component class="javax.swing.JLabel" name="rucLabel">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="4"/>
-        <Property name="text" type="java.lang.String" value="Ruc:"/>
+        <Property name="text" type="java.lang.String" value="R.U.C.:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="razonSocialLabel">
@@ -237,7 +282,7 @@
     <Component class="javax.swing.JLabel" name="idLabel">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="4"/>
-        <Property name="text" type="java.lang.String" value="Id:"/>
+        <Property name="text" type="java.lang.String" value="Codigo:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="nombreField">
@@ -280,12 +325,12 @@
         <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="telefonoField" targetPath="enabled" updateStrategy="1" immediately="false"/>
       </BindingProperties>
     </Component>
-    <Component class="javax.swing.JTextField" name="idField">
+    <Component class="javax.swing.JTextField" name="TxtCodigo">
       <BindingProperties>
-        <BindingProperty name="text" source="masterTable" sourcePath="${selectedElement.id}" target="idField" targetPath="text" updateStrategy="0" immediately="false">
+        <BindingProperty name="text" source="masterTable" sourcePath="${selectedElement.id}" target="TxtCodigo" targetPath="text" updateStrategy="0" immediately="false">
           <Property name="incompletePathValue" type="java.lang.String" value="null"/>
         </BindingProperty>
-        <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="idField" targetPath="enabled" updateStrategy="1" immediately="false"/>
+        <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="TxtCodigo" targetPath="enabled" updateStrategy="1" immediately="false"/>
       </BindingProperties>
     </Component>
     <Component class="javax.swing.JButton" name="saveButton">
@@ -345,6 +390,13 @@
           <Font name="Lucida Grande" size="24" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Listar Proveedores"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextField1">
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Buscar"/>
       </Properties>
     </Component>
   </SubComponents>
