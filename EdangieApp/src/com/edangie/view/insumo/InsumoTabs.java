@@ -31,41 +31,25 @@ public class InsumoTabs extends javax.swing.JPanel {
         insumoListar1 = new com.edangie.view.insumo.InsumoListar();
         insumoRegistrar1 = new com.edangie.view.insumo.InsumoRegistrar();
         jPanel1 = new javax.swing.JPanel();
-        proveedorRegistrar1 = new com.edangie.view.proveedor.ProveedorRegistrar();
         proveedorListar1 = new com.edangie.view.proveedor.ProveedorListar();
 
         jTabbedPane1.addTab("Listar Insumos", insumoListar1);
         jTabbedPane1.addTab("Registrar Insumo", insumoRegistrar1);
 
-        proveedorRegistrar1.setBackground(new java.awt.Color(244, 244, 244));
-        proveedorRegistrar1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        proveedorRegistrar1.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                proveedorRegistrar1PropertyChange(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(proveedorListar1, javax.swing.GroupLayout.PREFERRED_SIZE, 493, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(proveedorRegistrar1, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(proveedorListar1, javax.swing.GroupLayout.PREFERRED_SIZE, 835, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(proveedorListar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(53, 53, 53)
-                        .addComponent(proveedorRegistrar1, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addComponent(proveedorListar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -77,7 +61,7 @@ public class InsumoTabs extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 868, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -85,16 +69,11 @@ public class InsumoTabs extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void proveedorRegistrar1PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_proveedorRegistrar1PropertyChange
-        // TODO add your handling code here:
-    }//GEN-LAST:event_proveedorRegistrar1PropertyChange
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.edangie.view.insumo.InsumoListar insumoListar1;
     private com.edangie.view.insumo.InsumoRegistrar insumoRegistrar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private com.edangie.view.proveedor.ProveedorListar proveedorListar1;
-    private com.edangie.view.proveedor.ProveedorRegistrar proveedorRegistrar1;
     // End of variables declaration//GEN-END:variables
 }
