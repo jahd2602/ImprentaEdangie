@@ -84,13 +84,11 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="direccionLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="telefonoLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="tipoLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="direccionField" alignment="0" max="32767" attributes="0"/>
                                   <Component id="telefonoField" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="tipoField" alignment="1" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -127,20 +125,15 @@
                           <Component id="telefonoLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="telefonoField" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="tipoLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="tipoField" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace pref="12" max="32767" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="newButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="newButton1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -235,11 +228,6 @@
         <Property name="text" type="java.lang.String" value="Telefono:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="tipoLabel">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Tipo:"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JTextField" name="direccionField">
       <BindingProperties>
         <BindingProperty name="text" source="masterTable" sourcePath="${selectedElement.direccion}" target="direccionField" targetPath="text" updateStrategy="0" immediately="false"/>
@@ -252,15 +240,6 @@
           <Property name="incompletePathValue" type="java.lang.String" value="null"/>
         </BindingProperty>
         <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="telefonoField" targetPath="enabled" updateStrategy="1" immediately="false"/>
-      </BindingProperties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="tipoField">
-      <Properties>
-        <Property name="editable" type="boolean" value="false"/>
-      </Properties>
-      <BindingProperties>
-        <BindingProperty name="text" source="masterTable" sourcePath="${selectedElement.tipo}" target="tipoField" targetPath="text" updateStrategy="0" immediately="false"/>
-        <BindingProperty name="enabled" source="masterTable" sourcePath="${selectedElement != null}" target="tipoField" targetPath="enabled" updateStrategy="1" immediately="false"/>
       </BindingProperties>
     </Component>
     <Component class="javax.swing.JButton" name="saveButton">
