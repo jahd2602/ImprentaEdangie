@@ -28,7 +28,7 @@ public class ProveedorTabs extends javax.swing.JPanel {
     private void initComponents() {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        proveedorListar1 = new com.edangie.view.proveedor.ProveedorListar();
+        proveedorListar1 = new com.edangie.view.proveedor.ProveedorListarViejo();
         proveedorRegistrar1 = new com.edangie.view.proveedor.ProveedorRegistrar();
 
         jTabbedPane1.addTab("Listar Proveedores", proveedorListar1);
@@ -48,7 +48,7 @@ public class ProveedorTabs extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTabbedPane jTabbedPane1;
-    private com.edangie.view.proveedor.ProveedorListar proveedorListar1;
+    private com.edangie.view.proveedor.ProveedorListarViejo proveedorListar1;
     private com.edangie.view.proveedor.ProveedorRegistrar proveedorRegistrar1;
     // End of variables declaration//GEN-END:variables
 }

@@ -30,50 +30,28 @@ public class InsumoTabs extends javax.swing.JPanel {
         jTabbedPane1 = new javax.swing.JTabbedPane();
         insumoListar1 = new com.edangie.view.insumo.InsumoListar();
         insumoRegistrar1 = new com.edangie.view.insumo.InsumoRegistrar();
-        jPanel1 = new javax.swing.JPanel();
-        proveedorListar1 = new com.edangie.view.proveedor.ProveedorListar();
+        proveedorListar2 = new com.edangie.view.proveedor.ProveedorListar();
 
         jTabbedPane1.addTab("Listar Insumos", insumoListar1);
         jTabbedPane1.addTab("Registrar Insumo", insumoRegistrar1);
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(proveedorListar1, javax.swing.GroupLayout.PREFERRED_SIZE, 835, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(proveedorListar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        proveedorListar1.getAccessibleContext().setAccessibleDescription("");
-
-        jTabbedPane1.addTab("Proveedores", jPanel1);
+        jTabbedPane1.addTab("Proveedores", proveedorListar2);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 939, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 565, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.edangie.view.insumo.InsumoListar insumoListar1;
     private com.edangie.view.insumo.InsumoRegistrar insumoRegistrar1;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private com.edangie.view.proveedor.ProveedorListar proveedorListar1;
+    private com.edangie.view.proveedor.ProveedorListar proveedorListar2;
     // End of variables declaration//GEN-END:variables
 }
