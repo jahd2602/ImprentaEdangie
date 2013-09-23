@@ -79,6 +79,8 @@ public class InsumoView extends JPanel {
 
         FormListener formListener = new FormListener();
 
+        setLayout(new java.awt.BorderLayout());
+
         org.jdesktop.swingbinding.JTableBinding jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, list, masterTable);
         org.jdesktop.swingbinding.JTableBinding.ColumnBinding columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${id}"));
         columnBinding.setColumnName("Codigo");
@@ -117,7 +119,7 @@ public class InsumoView extends JPanel {
                             .add(jPanel1Layout.createSequentialGroup()
                                 .add(jTextField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 718, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(jButton1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 226, Short.MAX_VALUE)))
+                                .add(jButton1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)))
                         .addContainerGap())
                     .add(jPanel1Layout.createSequentialGroup()
                         .add(refreshButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 196, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
@@ -229,7 +231,7 @@ public class InsumoView extends JPanel {
                                 .add(newButton, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 101, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                                 .add(saveButton)
-                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 57, Short.MAX_VALUE)
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 51, Short.MAX_VALUE)
                                 .add(deleteButton)))
                         .add(492, 492, 492))
                     .add(jPanel2Layout.createSequentialGroup()
@@ -275,7 +277,7 @@ public class InsumoView extends JPanel {
         jTabbedPane1.addTab("Insumo", jPanel2);
         jTabbedPane1.addTab("Proveedores", proveedor1);
 
-        add(jTabbedPane1);
+        add(jTabbedPane1, java.awt.BorderLayout.CENTER);
 
         bindingGroup.bind();
     }

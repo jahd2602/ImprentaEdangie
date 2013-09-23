@@ -35,7 +35,7 @@ public class Principal extends javax.swing.JFrame {
         initComponents();
         this.contentPane = getContentPane();
 
-        this.setcontenedor(new InsumoView());
+        this.setcontenedor(new PedidoTabs());
         this.pack();
 
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
