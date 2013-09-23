@@ -145,4 +145,8 @@ public class Cliente implements Serializable {
     public String toString() {
         return "com.edangie.model.Cliente[ id=" + id + " ]";
     }
+
+    public void setClienteNatural(Serializable jon) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

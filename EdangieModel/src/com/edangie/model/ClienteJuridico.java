@@ -23,19 +23,19 @@ import javax.persistence.Table;
 @Table(name = "CLIENTE_JURIDICO")
 @NamedQueries({
     @NamedQuery(name = "ClienteJuridico.findAll", query = "SELECT c FROM ClienteJuridico c"),
-    @NamedQuery(name = "ClienteJuridico.findByRuc", query = "SELECT c FROM ClienteJuridico c WHERE c.ruc = :ruc"),
     @NamedQuery(name = "ClienteJuridico.findByRazonSocial", query = "SELECT c FROM ClienteJuridico c WHERE c.razonSocial = :razonSocial"),
-    @NamedQuery(name = "ClienteJuridico.findByIdCliente", query = "SELECT c FROM ClienteJuridico c WHERE c.idCliente = :idCliente")})
+    @NamedQuery(name = "ClienteJuridico.findByIdCliente", query = "SELECT c FROM ClienteJuridico c WHERE c.idCliente = :idCliente"),
+    @NamedQuery(name = "ClienteJuridico.findByRuc", query = "SELECT c FROM ClienteJuridico c WHERE c.ruc = :ruc")})
 public class ClienteJuridico implements Serializable {
     private static final long serialVersionUID = 1L;
-    @Column(name = "RUC")
-    private Integer ruc;
     @Column(name = "RAZON_SOCIAL")
     private String razonSocial;
     @Id
     @Basic(optional = false)
     @Column(name = "ID_CLIENTE")
     private Integer idCliente;
+    @Column(name = "RUC")
+    private String ruc;
     @JoinColumn(name = "ID_CLIENTE", referencedColumnName = "ID", insertable = false, updatable = false)
     @OneToOne(optional = false)
     private Cliente cliente;
@@ -45,14 +45,6 @@ public class ClienteJuridico implements Serializable {
 
     public ClienteJuridico(Integer idCliente) {
         this.idCliente = idCliente;
-    }
-
-    public Integer getRuc() {
-        return ruc;
-    }
-
-    public void setRuc(Integer ruc) {
-        this.ruc = ruc;
     }
 
     public String getRazonSocial() {
@@ -69,6 +61,14 @@ public class ClienteJuridico implements Serializable {
 
     public void setIdCliente(Integer idCliente) {
         this.idCliente = idCliente;
+    }
+
+    public String getRuc() {
+        return ruc;
+    }
+
+    public void setRuc(String ruc) {
+        this.ruc = ruc;
     }
 
     public Cliente getCliente() {
