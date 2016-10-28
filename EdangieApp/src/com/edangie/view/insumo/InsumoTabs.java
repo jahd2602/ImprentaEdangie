@@ -51,7 +51,6 @@ public class InsumoTabs extends javax.swing.JPanel {
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.edangie.view.insumo.InsumoListar insumoListar2;
     private javax.swing.JTabbedPane jTabbedPane1;

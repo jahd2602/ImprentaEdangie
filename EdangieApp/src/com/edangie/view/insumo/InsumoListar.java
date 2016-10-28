@@ -17,7 +17,7 @@ import javax.swing.JPanel;
  * @author daustinsac
  */
 public class InsumoListar extends JPanel {
-    
+
     public InsumoListar() {
         initComponents();
         if (!Beans.isDesignTime()) {
@@ -258,8 +258,6 @@ public class InsumoListar extends JPanel {
         }
     }// </editor-fold>//GEN-END:initComponents
 
-    
-
     @SuppressWarnings("unchecked")
     private void refreshButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshButtonActionPerformed
         entityManager.getTransaction().rollback();
@@ -271,7 +269,7 @@ public class InsumoListar extends JPanel {
         list.clear();
         list.addAll(data);
     }//GEN-LAST:event_refreshButtonActionPerformed
-    
+
     private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
         int[] selected = masterTable.getSelectedRows();
         List<com.edangie.model.Insumo> toRemove = new ArrayList<com.edangie.model.Insumo>(selected.length);
@@ -282,7 +280,7 @@ public class InsumoListar extends JPanel {
         }
         list.removeAll(toRemove);
     }//GEN-LAST:event_deleteButtonActionPerformed
-    
+
     private void newButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newButtonActionPerformed
         com.edangie.model.Insumo i = new com.edangie.model.Insumo();
         entityManager.persist(i);
@@ -291,7 +289,7 @@ public class InsumoListar extends JPanel {
         masterTable.setRowSelectionInterval(row, row);
         masterTable.scrollRectToVisible(masterTable.getCellRect(row, 0, true));
     }//GEN-LAST:event_newButtonActionPerformed
-    
+
     private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
         try {
             entityManager.getTransaction().commit();
@@ -307,12 +305,11 @@ public class InsumoListar extends JPanel {
             list.addAll(merged);
         }
     }//GEN-LAST:event_saveButtonActionPerformed
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField costoField;
     private javax.swing.JLabel costoLabel;
     private javax.swing.JButton deleteButton;
-    private javax.persistence.EntityManager entityManager;
+    public javax.persistence.EntityManager entityManager;
     private javax.swing.JTextField idField;
     private javax.swing.JLabel idLabel;
     private javax.swing.JComboBox jComboBox1;
@@ -332,11 +329,12 @@ public class InsumoListar extends JPanel {
     private javax.swing.JButton saveButton;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
+
     public static void main(String[] args) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {

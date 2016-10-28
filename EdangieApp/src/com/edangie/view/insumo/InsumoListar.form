@@ -7,8 +7,7 @@
         <Property name="persistenceUnit" type="java.lang.String" value="ImprentaEdangiePU"/>
       </Properties>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="false"/>
-        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="2"/>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
     </Component>
     <Component class="javax.persistence.Query" name="query">
