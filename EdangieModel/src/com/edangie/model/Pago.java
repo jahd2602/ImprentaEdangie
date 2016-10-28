@@ -22,6 +22,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "PAGO")
 @NamedQueries({
+    @NamedQuery(name = "Pago.findAllMax", query = "SELECT MAX(p.id) FROM Pago p"),
     @NamedQuery(name = "Pago.findAll", query = "SELECT p FROM Pago p"),
     @NamedQuery(name = "Pago.findByMonto", query = "SELECT p FROM Pago p WHERE p.monto = :monto"),
     @NamedQuery(name = "Pago.findById", query = "SELECT p FROM Pago p WHERE p.id = :id")})

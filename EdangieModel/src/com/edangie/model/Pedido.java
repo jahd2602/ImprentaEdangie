@@ -28,6 +28,7 @@ import javax.persistence.TemporalType;
 @Entity
 @Table(name = "PEDIDO")
 @NamedQueries({
+    @NamedQuery(name = "Pedido.findAllMax", query = "SELECT MAX(p.id) FROM Pedido p"),
     @NamedQuery(name = "Pedido.findAll", query = "SELECT p FROM Pedido p"),
     @NamedQuery(name = "Pedido.findByDescripcion", query = "SELECT p FROM Pedido p WHERE p.descripcion = :descripcion"),
     @NamedQuery(name = "Pedido.findByCantidad", query = "SELECT p FROM Pedido p WHERE p.cantidad = :cantidad"),
